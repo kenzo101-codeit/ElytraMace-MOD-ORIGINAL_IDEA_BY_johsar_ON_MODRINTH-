@@ -7,17 +7,25 @@ plugins {
     id 'java'
 }
 
-tasks.register("collectJars", Copy) {
-    group = "build"
-    dependsOn("buildAllJars")
+tasks.register('copyJars', Copy) {
+    group = 'build'
+    description = 'Gathers all mod jars into the dist folder.'
 
-    from("fabric/build/libs")
-    from("forge/build/libs")
-    from("neoforge/build/libs")
+    // Look for jars in the subprojects' build/libs folders
+    subprojects.each { subproject ->
+        if (subproject.name != 'common') { // We usually don't need the common-dev jar
+            from(subproject.layout.buildDirectory.dir("libs")) {
+                include "*.jar"
+                exclude "*-dev.jar", "*-sources.jar", "*-shadow.jar", "*-javadoc.jar" // Optional: filter for only the "clean" jars
+            }
+        }
+    }
 
-    include("*.jar")
-    into("$buildDir/dist")
+    into layout.projectDirectory.dir("dist")
 }
+
+// Make the build task automatically trigger this copy
+build.finalizedBy(copyJars)
 
 java {
     toolchain {

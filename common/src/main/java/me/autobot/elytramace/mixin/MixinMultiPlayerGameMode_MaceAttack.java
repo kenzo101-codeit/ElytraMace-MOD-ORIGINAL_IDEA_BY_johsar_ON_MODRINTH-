@@ -20,33 +20,46 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MultiPlayerGameMode.class)
-public class MixinMultiPlayerGameMode_MaceAttack {
+public abstract class MixinMultiPlayerGameMode_MaceAttack {
 
-    @Shadow
-    @Final
+    @Shadow @Final
     private ClientPacketListener connection;
-    @Unique
-    private boolean smash = false;
 
-    @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;ensureHasSentCarriedItem()V", shift = At.Shift.AFTER))
-    public void onAttackWithMace(Player player, Entity entity, CallbackInfo ci) {
-        if (!player.getItemInHand(InteractionHand.MAIN_HAND).is(Items.MACE)) {
-            return;
-        }
-        if (!player.getItemBySlot(EquipmentSlot.CHEST).is(Items.ELYTRA)) {
-            return;
-        }
+    @Unique
+    private boolean elytramace$smash;
+
+    @Inject(
+            method = "attack",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;ensureHasSentCarriedItem()V",
+                    shift = At.Shift.AFTER
+            )
+    )
+    private void elytramace$onAttack(Player player, Entity entity, CallbackInfo ci) {
+        if (player == null) return;
+
+        if (!player.getItemInHand(InteractionHand.MAIN_HAND).is(Items.MACE)) return;
+        if (!player.getItemBySlot(EquipmentSlot.CHEST).is(Items.ELYTRA)) return;
+
         if (player.isFallFlying() && player.fallDistance > 1.5F) {
-            smash = true;
-            this.connection.send(new ServerboundPlayerCommandPacket(player, ServerboundPlayerCommandPacket.Action.START_FALL_FLYING));
+            elytramace$smash = true;
+            this.connection.send(new ServerboundPlayerCommandPacket(
+                    player,
+                    ServerboundPlayerCommandPacket.Action.START_FALL_FLYING
+            ));
         }
     }
 
-    @Inject(method = "attack", at = @At(value = "TAIL"))
-    public void onAttackFinishedWithMace(Player player, Entity entity, CallbackInfo ci) {
-        if (smash) {
-            smash = false;
-            this.connection.send(new ServerboundPlayerCommandPacket(player, ServerboundPlayerCommandPacket.Action.START_FALL_FLYING));
-        }
+    @Inject(method = "attack", at = @At("TAIL"))
+    private void elytramace$afterAttack(Player player, Entity entity, CallbackInfo ci) {
+        if (!elytramace$smash) return;
+        elytramace$smash = false;
+
+        this.connection.send(new ServerboundPlayerCommandPacket(
+                player,
+                ServerboundPlayerCommandPacket.Action.START_FALL_FLYING
+        ));
     }
 }
+
