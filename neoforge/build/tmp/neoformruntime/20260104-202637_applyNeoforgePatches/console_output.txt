@@ -1,0 +1,29 @@
+--------------------------------------------------------------------------------
+
+Command-Line:
+ - /home/kenzo101/.jdks/ms-21.0.9/bin/java
+ - -jar
+ - /home/kenzo101/.gradle/caches/modules-2/files-2.1/io.codechicken/DiffPatch/2.0.0.36/5b32f9baa0c0371c0dc80a3b88794960af0c6b44/DiffPatch-2.0.0.36-all.jar
+ - /home/kenzo101/.gradle/caches/neoformruntime/intermediate_results/patch_4ae59cc3d0a55765d8005ce07c46d4c4e9e384a0_output.zip
+ - /home/kenzo101/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/21.0.143/3392df01dc82c09d0721c021f10d536564496727/neoforge-21.0.143-userdev.jar
+ - --prefix
+ - patches/
+ - --patch
+ - --archive
+ - ZIP
+ - --output
+ - ./output.zip
+ - --log-level
+ - WARN
+ - --mode
+ - OFFSET
+ - --archive-rejects
+ - ZIP
+ - --reject
+ - ./outputRejects.zip
+ - --base-path-prefix
+ - a/
+ - --modified-path-prefix
+ - b/
+--------------------------------------------------------------------------------
+
