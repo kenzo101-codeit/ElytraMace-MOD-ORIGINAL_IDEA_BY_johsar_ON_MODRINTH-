@@ -1,0 +1,18 @@
+--------------------------------------------------------------------------------
+
+Command-Line:
+ - /home/kenzo101/.jdks/ms-21.0.9/bin/java
+ - -jar
+ - /home/kenzo101/.gradle/caches/modules-2/files-2.1/net.neoforged/mergetool/2.0.3/85c096b0155715275f84922d41462484c9a0285c/mergetool-2.0.3-fatjar.jar
+ - --client
+ - /home/kenzo101/.gradle/caches/neoformruntime/intermediate_results/stripClient_b65e7ca771ca6f70bceffd8d32e4e37bcb704b01_output.jar
+ - --server
+ - /home/kenzo101/.gradle/caches/neoformruntime/intermediate_results/stripServer_f1cff38cad974d4a44b65d4ade7df135ee5a5ebe_output.jar
+ - --ann
+ - 1.21
+ - --output
+ - ./output.jar
+ - --inject
+ - false
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/MultiLoader-Template.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/MultiLoader-Template.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/MultiLoader-Template.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/MultiLoader-Template.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/MultiLoader-Template.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/MultiLoader-Template.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/MultiLoader-Template.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/MultiLoader-Template.forge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/MultiLoader-Template.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/MultiLoader-Template.forge.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/MultiLoader-Template.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/MultiLoader-Template.neoforge.main.iml" />
+    </modules>
+  </component>
+</project>

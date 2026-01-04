@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------
+
+Command-Line:
+ - /home/kenzo101/.jdks/ms-21.0.9/bin/java
+ - -jar
+ - /home/kenzo101/.gradle/caches/modules-2/files-2.1/net.neoforged.jst/jst-cli-bundle/1.0.74/4b55f9a755ff69d480d3fb5d68c40662f5265b7e/jst-cli-bundle-1.0.74.jar
+ - --problems-report
+ - /home/kenzo101/Downloads/elytramace/common/build/tmp/neoformruntime/20260104-173300_transformSources/problems.json
+ - --libraries-list
+ - ./libraries.txt
+ - --in-format
+ - ARCHIVE
+ - --out-format
+ - ARCHIVE
+ - --enable-parchment
+ - --parchment-mappings=/home/kenzo101/.gradle/caches/modules-2/files-2.1/org.parchmentmc.data/parchment-1.21/2024.07.28/7bf10de1e335c26bd211adc64547795e2ad96b5b/parchment-1.21-2024.07.28.zip
+ - --parchment-conflict-prefix=p_
+ - /home/kenzo101/.gradle/caches/neoformruntime/intermediate_results/patch_4ae59cc3d0a55765d8005ce07c46d4c4e9e384a0_output.zip
+ - ./output.zip
+--------------------------------------------------------------------------------
+
+Loading mapping file /home/kenzo101/.gradle/caches/modules-2/files-2.1/org.parchmentmc.data/parchment-1.21/2024.07.28/7bf10de1e335c26bd211adc64547795e2ad96b5b/parchment-1.21-2024.07.28.zip

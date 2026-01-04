@@ -1,0 +1,26 @@
+plugins {
+    // see https://fabricmc.net/develop/ for new versions
+    id 'fabric-loom' version '1.13-SNAPSHOT' apply false
+    // see https://projects.neoforged.net/neoforged/moddevgradle for new versions
+    id 'net.neoforged.moddev' version '2.0.123' apply false
+
+    id 'java'
+}
+
+tasks.register("collectJars", Copy) {
+    group = "build"
+    dependsOn("buildAllJars")
+
+    from("fabric/build/libs")
+    from("forge/build/libs")
+    from("neoforge/build/libs")
+
+    include("*.jar")
+    into("$buildDir/dist")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
