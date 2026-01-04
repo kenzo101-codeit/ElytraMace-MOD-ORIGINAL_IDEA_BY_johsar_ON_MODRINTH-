@@ -125,3 +125,5 @@ Screenshots and videos coming soon.
 ---
 
 Happy Elytra smashing 🦅⚔️
+
+# PS: See `LICENSE`
