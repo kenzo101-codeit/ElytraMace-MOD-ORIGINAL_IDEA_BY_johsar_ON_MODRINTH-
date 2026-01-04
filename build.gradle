@@ -1,0 +1,34 @@
+plugins {
+    // see https://fabricmc.net/develop/ for new versions
+    id 'fabric-loom' version '1.13-SNAPSHOT' apply false
+    // see https://projects.neoforged.net/neoforged/moddevgradle for new versions
+    id 'net.neoforged.moddev' version '2.0.123' apply false
+
+    id 'java'
+}
+
+tasks.register('copyJars', Copy) {
+    group = 'build'
+    description = 'Gathers all mod jars into the dist folder.'
+
+    // Look for jars in the subprojects' build/libs folders
+    subprojects.each { subproject ->
+        if (subproject.name != 'common') { // We usually don't need the common-dev jar
+            from(subproject.layout.buildDirectory.dir("libs")) {
+                include "*.jar"
+                exclude "*-dev.jar", "*-sources.jar", "*-shadow.jar", "*-javadoc.jar" // Optional: filter for only the "clean" jars
+            }
+        }
+    }
+
+    into layout.projectDirectory.dir("dist")
+}
+
+// Make the build task automatically trigger this copy
+build.finalizedBy(copyJars)
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
