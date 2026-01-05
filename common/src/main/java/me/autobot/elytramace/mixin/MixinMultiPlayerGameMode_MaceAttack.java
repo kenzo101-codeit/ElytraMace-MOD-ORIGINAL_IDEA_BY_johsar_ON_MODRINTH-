@@ -25,6 +25,8 @@ public abstract class MixinMultiPlayerGameMode_MaceAttack {
     @Shadow @Final
     private ClientPacketListener connection;
 
+    @Shadow public float fallDistance;
+
     @Unique
     private boolean elytramace$smash;
 

@@ -1,5 +1,5 @@
 modLoader = "javafml" #mandatory
-loaderVersion = "[51.0.0,)" #mandatory This is typically bumped every Minecraft version by Forge. See https://files.minecraftforge.net/ for a list of versions.
+loaderVersion = "[51.0.0,60.0.0)" #mandatory This is typically bumped every Minecraft version by Forge. See https://files.minecraftforge.net/ for a list of versions.
 license = "ARR" # Review your options at https://choosealicense.com/.
 issueTrackerURL="https://github.com/sjavi4/ElytraMaceSmasher/issues" #optional
 clientSideOnly=true #optional
@@ -8,7 +8,7 @@ displayTest="IGNORE_SERVER_VERSION"
 
 [[mods]] #mandatory
 modId = "elytramace" #mandatory
-version = "1.0" #mandatory
+version = "1.0-FOR-1.21.10" #mandatory
 displayName = "ElytraMace" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional (see https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/)
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional (displayed in the mod UI)
@@ -20,10 +20,10 @@ description = '''This mod allows you to Elytra-Mace while flying with the elytra
 [[dependencies.elytramace]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.21,)"
+versionRange = "[1.21,1.21.10)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[mixins]]
-config="elytramace.mixins.json"
+config="elytramace.forge.mixins.json"
 

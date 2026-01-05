@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"me.autobot.elytramace.mixin","c":"MixinMultiPlayerGameMode_MaceAttack","l":"MixinMultiPlayerGameMode_MaceAttack()","u":"%3Cinit%3E()"}];updateSearchResults();

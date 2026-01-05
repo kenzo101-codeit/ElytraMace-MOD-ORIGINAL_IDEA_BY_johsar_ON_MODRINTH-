@@ -1,32 +1,32 @@
 modLoader = "neoforge" #mandatory
-loaderVersion = "[21.0.143,)" #mandatory
+loaderVersion = "[21.0.143,21.10.64)" #mandatory
 license = "ARR" # Review your options at https://choosealicense.com/.
 issueTrackerURL="https://github.com/sjavi4/ElytraMaceSmasher/issues" #optional
 
-#LETS PUT THIS ON CLIENT SIDE FOR MODERN FORGE.
+#LET'S PUT THIS ON CLIENT SIDE FOR MODERN FORGE.
 displayTest="IGNORE_SERVER_VERSION"
 [[mods]] #mandatory
 modId = "elytramace" #mandatory
-version = "1.0" #mandatory
+version = "1.0-FOR-1.1.21.10" #mandatory
 displayName = "ElytraMace" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional (see https://docs.neoforged.net/docs/misc/updatechecker/)
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional (displayed in the mod UI)
 logoFile="mace.png" #optional
 credits="Johsar and Kenzo101" #optional
 authors = "Original by johsar(Ported By Kenzo101 Studios)" #optional
-description = '''This mod allows you to Elytra-Mace while flying with the elytra!''' #mandatory (Supports multiline text)"
+description = '''This mod allows you to Elytra-Mace while flying with the elytra!''' #mandatory (Supports multiline text)
 [[mixins]]
 config = "elytramace.neoforge.mixins.json"
 [[dependencies.elytramace]] #optional
 modId = "neoforge" #mandatory
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
-versionRange = "[21.0.0-beta,)" #mandatory
+versionRange = "[21.0.143,21.10.64)" #mandatory
 ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
 side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'
 [[dependencies.elytramace]]
 modId = "minecraft"
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
-versionRange = "[1.21,)"
+versionRange = "[1.21,1.21.10)"
 ordering = "NONE"
 side = "CLIENT"
 

@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"me.autobot.elytramace","l":"ElytraMace"},{"p":"me.autobot.elytramace.client","l":"ElytramaceClient"},{"p":"me.autobot.elytramace.mixin","l":"MixinMultiPlayerGameMode_MaceAttack"}];updateSearchResults();

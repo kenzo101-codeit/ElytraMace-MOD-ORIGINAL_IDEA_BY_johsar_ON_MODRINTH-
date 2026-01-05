@@ -1,4 +1,4 @@
-package me.autobot.elytramace.client;
+package src.main.java.me.autobot.elytramace.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
