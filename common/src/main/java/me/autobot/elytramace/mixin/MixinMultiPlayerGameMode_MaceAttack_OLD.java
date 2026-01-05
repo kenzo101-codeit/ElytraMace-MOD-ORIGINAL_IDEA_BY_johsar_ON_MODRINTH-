@@ -2,14 +2,11 @@ package me.autobot.elytramace.mixin;
 
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
-import net.minecraft.core.Direction;
-import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MultiPlayerGameMode.class)
-public abstract class MixinMultiPlayerGameMode_MaceAttack {
+public abstract class MixinMultiPlayerGameMode_MaceAttack_OLD {
 
     @Shadow @Final
     private ClientPacketListener connection;
@@ -42,7 +39,13 @@ public abstract class MixinMultiPlayerGameMode_MaceAttack {
         if (!player.getItemInHand(InteractionHand.MAIN_HAND).is(Items.MACE)) return;
         if (!player.getItemBySlot(EquipmentSlot.CHEST).is(Items.ELYTRA)) return;
 
-        if (player.isFallFlying() && player.fallDistance > 1.5F) {
+        // ✅ OLD-SAFE fall detection (works on 1.21.0–1.21.4)
+        boolean fallingFast =
+                player.isFallFlying()
+                        && !player.onGround()
+                        && player.getDeltaMovement().y < -0.6D;
+
+        if (fallingFast) {
             elytramace$smash = true;
             this.connection.send(
                     new ServerboundPlayerCommandPacket(
@@ -58,10 +61,11 @@ public abstract class MixinMultiPlayerGameMode_MaceAttack {
         if (!elytramace$smash) return;
         elytramace$smash = false;
 
-        this.connection.send(new ServerboundPlayerCommandPacket(
-                player,
-                ServerboundPlayerCommandPacket.Action.START_FALL_FLYING
-        ));
+        this.connection.send(
+                new ServerboundPlayerCommandPacket(
+                        player,
+                        ServerboundPlayerCommandPacket.Action.START_FALL_FLYING
+                )
+        );
     }
 }
-

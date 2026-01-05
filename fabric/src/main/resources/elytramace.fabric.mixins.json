@@ -2,11 +2,13 @@
   "required": true,
   "minVersion": "0.8",
   "package": "me.autobot.elytramace.mixin",
+  "plugin": "me.autobot.elytramace.mixin.ElytraMaceMixinPlugin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [
-    "MixinMultiPlayerGameMode_MaceAttack"
+    "MixinMultiPlayerGameMode_MaceAttack_NEW",
+    "MixinMultiPlayerGameMode_MaceAttack_OLD"
   ],
   "server": [],
   "injectors": {

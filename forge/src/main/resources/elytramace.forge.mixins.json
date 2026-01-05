@@ -4,7 +4,8 @@
   "package": "me.autobot.elytramace.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "MixinMultiPlayerGameMode_MaceAttack"
+    "MixinMultiPlayerGameMode_MaceAttack_NEW",
+    "MixinMultiPlayerGameMode_MaceAttack_OLD"
   ],
   "injectors": {
     "defaultRequire": 1
