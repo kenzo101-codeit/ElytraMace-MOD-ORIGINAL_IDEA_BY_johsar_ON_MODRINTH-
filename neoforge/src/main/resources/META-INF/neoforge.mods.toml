@@ -1,4 +1,4 @@
-modLoader = "neoforge" #mandatory
+modLoader = "fmljava" #mandatory
 loaderVersion = "[21.0.143,21.10.64)" #mandatory
 license = "ARR" # Review your options at https://choosealicense.com/.
 issueTrackerURL="https://github.com/sjavi4/ElytraMaceSmasher/issues" #optional

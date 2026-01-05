@@ -2,6 +2,7 @@ plugins {
     id 'multiloader-loader'
     id 'fabric-loom'
 }
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.layered {
@@ -23,18 +24,26 @@ loom {
     mixin {
         defaultRefmapName.set("${mod_id}.refmap.json")
     }
+
+    mods {
+        "${mod_id}" {
+            sourceSet project(':common').sourceSets.main
+            sourceSet sourceSets.main
+        }
+    }
+
     runs {
         client {
             client()
-            setConfigName('Fabric Client')
-            ideConfigGenerated(true)
-            runDir('runs/client')
+            configName = 'Fabric Client'
+            ideConfigGenerated = true
+            runDir = 'runs/client'
         }
         server {
             server()
-            setConfigName('Fabric Server')
-            ideConfigGenerated(true)
-            runDir('runs/server')
+            configName = 'Fabric Server'
+            ideConfigGenerated = true
+            runDir = 'runs/server'
         }
     }
 }

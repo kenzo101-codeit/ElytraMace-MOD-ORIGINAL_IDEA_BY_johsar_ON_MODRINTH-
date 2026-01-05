@@ -1,0 +1,18 @@
+{
+  "projectPath": ":common",
+  "classpaths": {
+    "test": [
+      "/home/kenzo101/Downloads/elytramace/common/build/classes/java/test",
+      "/home/kenzo101/Downloads/elytramace/common/build/resources/test",
+      "/home/kenzo101/Downloads/elytramace/common/out/test/classes",
+      "/home/kenzo101/Downloads/elytramace/common/out/test/resources"
+    ],
+    "main": [
+      "/home/kenzo101/Downloads/elytramace/common/build/classes/java/main",
+      "/home/kenzo101/Downloads/elytramace/common/build/resources/main",
+      "/home/kenzo101/Downloads/elytramace/common/build/libs/elytramace-common-1.21.10-1.0.jar",
+      "/home/kenzo101/Downloads/elytramace/common/out/production/classes",
+      "/home/kenzo101/Downloads/elytramace/common/out/production/resources"
+    ]
+  }
+}

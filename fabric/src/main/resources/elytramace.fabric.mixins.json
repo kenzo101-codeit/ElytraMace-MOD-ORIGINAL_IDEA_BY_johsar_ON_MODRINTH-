@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "me.autobot.elytramace.mixin",
-  "plugin": "me.autobot.elytramace.mixin.ElytraMaceMixinPlugin",
+  "plugin": "me.autobot.elytramace.mixin.ElytraMaceMixinPluginFabric",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
