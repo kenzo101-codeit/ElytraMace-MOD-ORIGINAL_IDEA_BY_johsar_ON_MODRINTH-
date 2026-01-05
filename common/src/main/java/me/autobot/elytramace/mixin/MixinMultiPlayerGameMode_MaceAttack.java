@@ -25,8 +25,6 @@ public abstract class MixinMultiPlayerGameMode_MaceAttack {
     @Shadow @Final
     private ClientPacketListener connection;
 
-    @Shadow public float fallDistance;
-
     @Unique
     private boolean elytramace$smash;
 
@@ -46,10 +44,12 @@ public abstract class MixinMultiPlayerGameMode_MaceAttack {
 
         if (player.isFallFlying() && player.fallDistance > 1.5F) {
             elytramace$smash = true;
-            this.connection.send(new ServerboundPlayerCommandPacket(
-                    player,
-                    ServerboundPlayerCommandPacket.Action.START_FALL_FLYING
-            ));
+            this.connection.send(
+                    new ServerboundPlayerCommandPacket(
+                            player,
+                            ServerboundPlayerCommandPacket.Action.START_FALL_FLYING
+                    )
+            );
         }
     }
 
