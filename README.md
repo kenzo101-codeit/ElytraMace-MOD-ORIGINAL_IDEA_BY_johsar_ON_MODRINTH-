@@ -120,7 +120,7 @@ Please include:
 
 ## 📸 Media
 
-Screenshots and videos coming soon.
+![Elytra-Rocket-Mace Combo DEMO](ezgif-6c25a22bd65a580a.gif)
 
 ---
 
