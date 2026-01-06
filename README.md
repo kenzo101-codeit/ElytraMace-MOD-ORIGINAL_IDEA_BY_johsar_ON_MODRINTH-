@@ -1,4 +1,5 @@
-![GitHub Repo](https://img.shields.io/badge/github-repo-blue?logo=github)
+![GitHub Repo](https://img.shields.io/badge/github-repo-blue?logo=github) 
+![Static Badge](https://img.shields.io/badge/Minecraft%3A%201.21%20-%201.21.10-blue?style=flat)
 # ElytraMace-MOD(ORIGINAL_IDEA_BY_johsar_ON_MODRINTH)
 ## This is an multiloader mod version of johsar's elytra mace mod. make sure to visit the original idea at https://modrinth.com/mod/elytramace and https://github.com/sjavi4/ElytraMaceSmasher !
 
