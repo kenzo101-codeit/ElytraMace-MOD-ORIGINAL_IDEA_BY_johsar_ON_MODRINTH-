@@ -122,6 +122,23 @@ Please include:
 
 ![Elytra-Rocket-Mace Combo DEMO](ezgif-6c25a22bd65a580a.gif)
 
+This looks like a solid start for your README.md! To make it look professional and address the version capping and media, I’ve added a Known Issues section and a way to include your Media.
+
+Here is the updated section you can copy and paste directly into your file:
+
+📸 Media
+Using an elytra and firework rockets to charge a massive mace attack.
+
+---
+⚠️ Known Issues & Limitations:
+- Version Cap (1.21 - 1.21.10): This mod is currently not compatible with Minecraft 1.21.11+.
+
+- Reason: Minecraft 1.21.11 introduced major internal refactors (specifically changing the Model class generics and shifting toward official unobfuscation). Some of our development tools do not yet support these breaking changes.
+
+- Future Plans: Support for 1.21.11 and beyond is planned once the toolchain (Loom/Forge) stabilizes for the new mapping system.
+
+- Shadow Conflicts: In rare cases, other mods that modify player attack logic might conflict with the MultiPlayerGameMode mixin.
+
 ---
 
-Happy Elytra smashing 🦅⚔️
+Happy Elytra Macing 🦅⚔️
