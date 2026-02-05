@@ -1,3 +1,5 @@
+![GitHub Repo](https://img.shields.io/badge/github-repo-blue?logo=github) 
+![Static Badge](https://img.shields.io/badge/Minecraft%3A%201.21%20-%201.21.10-blue?style=flat)
 # ElytraMace-MOD(ORIGINAL_IDEA_BY_johsar_ON_MODRINTH)
 ## This is an multiloader mod version of johsar's elytra mace mod. make sure to visit the original idea at https://modrinth.com/mod/elytramace and https://github.com/sjavi4/ElytraMaceSmasher !
 
@@ -26,6 +28,12 @@ A small client-side Minecraft mod that allows players to **use maces effectively
 | NeoForge | ✅ Supported | NeoForge 21+                    |
 
 All loaders are **client-only** and safe to use on vanilla servers.
+
+---
+## DOWNLOAD BUTTONS!(read the entire README first!)
+![Static Badge](https://img.shields.io/badge/FABRIC%20DOWNLOAD-blue?style=flat&link=https%3A%2F%2Fgithub.com%2Fkenzo101-codeit%2FElytraMace-MOD-ORIGINAL_IDEA_BY_johsar_ON_MODRINTH-%2Freleases%2Fdownload%2FRELEASE_1.0-FOR_1.21.10%2Felytramace-fabric-FOR_1.21.10-1.0.jar)
+![Static Badge](https://img.shields.io/badge/FORGE%20DOWNLOAD-blue?style=flat&link=https%3A%2F%2Fgithub.com%2Fkenzo101-codeit%2FElytraMace-MOD-ORIGINAL_IDEA_BY_johsar_ON_MODRINTH-%2Freleases%2Fdownload%2FRELEASE_1.0-FOR_1.21.10%2FElytraMace-forge-FOR_1.21.10-1.0.jar)
+![Static Badge](https://img.shields.io/badge/NEOFORGE%20DOWNLOAD-blue?style=flat&link=https%3A%2F%2Fgithub.com%2Fkenzo101-codeit%2FElytraMace-MOD-ORIGINAL_IDEA_BY_johsar_ON_MODRINTH-%2Freleases%2Fdownload%2FRELEASE_1.0-FOR_1.21.10%2Felytramace-neoforge-FOR_1.21.10-1.0.jar)
 
 ---
 
@@ -120,8 +128,25 @@ Please include:
 
 ## 📸 Media
 
-Screenshots and videos coming soon.
+![Elytra-Rocket-Mace Combo DEMO](ezgif-6c25a22bd65a580a.gif)
+
+This looks like a solid start for your README.md! To make it look professional and address the version capping and media, I’ve added a Known Issues section and a way to include your Media.
+
+Here is the updated section you can copy and paste directly into your file:
+
+📸 Media
+Using an elytra and firework rockets to charge a massive mace attack.
+
+---
+⚠️ Known Issues & Limitations:
+- Version Cap (1.21 - 1.21.10): This mod is currently not compatible with Minecraft 1.21.11+.
+
+- Reason: Minecraft 1.21.11 introduced major internal refactors (specifically changing the Model class generics and shifting toward official unobfuscation). Some of our development tools do not yet support these breaking changes.
+
+- Future Plans: Support for 1.21.11 and beyond is planned once the toolchain (Loom/Forge) stabilizes for the new mapping system.
+
+- Shadow Conflicts: In rare cases, other mods that modify player attack logic might conflict with the MultiPlayerGameMode mixin.
 
 ---
 
-Happy Elytra smashing 🦅⚔️
+Happy Elytra Macing 🦅⚔️
