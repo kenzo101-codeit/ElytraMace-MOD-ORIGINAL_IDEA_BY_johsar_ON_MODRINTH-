@@ -1,5 +1,5 @@
 modLoader = "javafml" #mandatory
-loaderVersion = "[21.0.143,21.10.65)" #mandatory
+loaderVersion = "[21.0.143,21.11.0-beta)" #mandatory
 license = "ARR" # Review your options at https://choosealicense.com/.
 issueTrackerURL="https://github.com/sjavi4/ElytraMaceSmasher/issues" #optional
 
