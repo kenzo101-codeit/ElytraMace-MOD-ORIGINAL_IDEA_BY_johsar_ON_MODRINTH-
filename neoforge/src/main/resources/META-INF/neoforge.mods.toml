@@ -20,7 +20,7 @@ config = "elytramace.neoforge.mixins.json"
 [[dependencies.elytramace]] #optional
 modId = "neoforge" #mandatory
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
-versionRange = "[21.0.143,21.10.65)" #mandatory
+versionRange = "[21.0.143,21.11.0-beta)" #mandatory
 ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
 side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'
 [[dependencies.elytramace]]
