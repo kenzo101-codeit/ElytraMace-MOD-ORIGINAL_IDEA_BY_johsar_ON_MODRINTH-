@@ -1,5 +1,5 @@
-modLoader = "fmljava" #mandatory
-loaderVersion = "[21.0.143,21.10.64)" #mandatory
+modLoader = "javafml" #mandatory
+loaderVersion = "[21.0.143,21.10.65)" #mandatory
 license = "ARR" # Review your options at https://choosealicense.com/.
 issueTrackerURL="https://github.com/sjavi4/ElytraMaceSmasher/issues" #optional
 
@@ -20,13 +20,13 @@ config = "elytramace.neoforge.mixins.json"
 [[dependencies.elytramace]] #optional
 modId = "neoforge" #mandatory
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
-versionRange = "[21.0.143,21.10.64)" #mandatory
+versionRange = "[21.0.143,21.10.65)" #mandatory
 ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
 side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'
 [[dependencies.elytramace]]
 modId = "minecraft"
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
-versionRange = "[1.21,1.21.10)"
+versionRange = "[1.21,1.21.11)"
 ordering = "NONE"
 side = "CLIENT"
 
