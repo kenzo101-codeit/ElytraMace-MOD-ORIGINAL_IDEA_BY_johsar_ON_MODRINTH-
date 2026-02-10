@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/elytramace.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/elytramace.common.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/elytramace.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/elytramace.fabric.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/elytramace.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/elytramace.fabric.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/elytramace.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/elytramace.forge.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/elytramace.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/elytramace.forge.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/elytramace.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/elytramace.neoforge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ElytraMace-MOD-ORIGINAL_IDEA_BY_johsar_ON_MODRINTH-.iml" filepath="$PROJECT_DIR$/.idea/ElytraMace-MOD-ORIGINAL_IDEA_BY_johsar_ON_MODRINTH-.iml" />
     </modules>
   </component>
 </project>
