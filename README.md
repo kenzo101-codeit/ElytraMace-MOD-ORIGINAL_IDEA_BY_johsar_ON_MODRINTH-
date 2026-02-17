@@ -20,6 +20,7 @@ A small client-side Minecraft mod that allows players to **use maces effectively
 ---
 
 ## 🧩 Supported Loaders
+
 ___________________________________________________________________________
 | Loader   | Status      | Notes                             |            |
 | -------- | ----------- | --------------------------------- |            |
