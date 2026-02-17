@@ -27,9 +27,10 @@ ___________________________________________________________________________
 | Fabric   | ✅ Supported  | Uses Fabric Loader + Fabric API |            |
 | Forge    | ✅ Supported? | JavaFML (Forge 51+)             | (untested) |
 | NeoForge | ✅ Supported? | NeoForge 21+                    | (untested) |
----------------------------------------------------------------------------
 
 All loaders are **client-only** and safe to use on vanilla servers.
+
+---
 
 ## DOWNLOAD BUTTONS!(read the entire README first!)
 ![Static Badge](https://img.shields.io/badge/FABRIC%20DOWNLOAD-blue?style=flat&link=https%3A%2F%2Fgithub.com%2Fkenzo101-codeit%2FElytraMace-MOD-ORIGINAL_IDEA_BY_johsar_ON_MODRINTH-%2Freleases%2Fdownload%2FRELEASE_1.0-FOR_1.21.10%2Felytramace-fabric-FOR_1.21.10-1.0.jar)
