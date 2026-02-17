@@ -19,9 +19,9 @@ A small client-side Minecraft mod that allows players to **use maces effectively
 
 ---
 
-## 🧩 Supported Loaders
+# 🧩 Supported Loaders
 
-___________________________________________________________________________
+!_________________________________________________________________________
 | Loader   | Status      | Notes                             |            |
 | -------- | ----------- | --------------------------------- |            |
 | Fabric   | ✅ Supported  | Uses Fabric Loader + Fabric API |            |
