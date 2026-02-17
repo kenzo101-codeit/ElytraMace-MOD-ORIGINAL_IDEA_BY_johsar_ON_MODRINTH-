@@ -21,11 +21,11 @@ A small client-side Minecraft mod that allows players to **use maces effectively
 
 ## 🧩 Supported Loaders
 
-| Loader   | Status      | Notes                           |
-| -------- | ----------- | ------------------------------- |
-| Fabric   | ✅ Supported  | Uses Fabric Loader + Fabric API |
-| Forge    | ✅ Supported? | JavaFML (Forge 51+)             | (untested)
-| NeoForge | ✅ Supported? | NeoForge 21+                    | (untested)
+| Loader   | Status      | Notes                           |              |
+| -------- | ----------- | ------------------------------- |              |
+| Fabric   | ✅ Supported  | Uses Fabric Loader + Fabric API |            |
+| Forge    | ✅ Supported? | JavaFML (Forge 51+)             | (untested) |
+| NeoForge | ✅ Supported? | NeoForge 21+                    | (untested) |
 
 All loaders are **client-only** and safe to use on vanilla servers.
 
