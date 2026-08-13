@@ -1,16 +1,13 @@
 plugins {
     id 'multiloader-loader'
-    id 'fabric-loom'
+    id 'net.fabricmc.fabric-loom'
 }
-
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
-    mappings loom.layered {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
-    }
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+    // no "mappings" block at all — 26.2 ships with real names built in
+
+    implementation "net.fabricmc:fabric-loader:${fabric_loader_version}"      // was modImplementation
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}" // was modImplementation
 
     implementation(project(path: ":common", configuration: "commonJava"))
     implementation(project(path: ":common", configuration: "commonResources"))
