@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "me.autobot.elytramace.mixin",
   "plugin": "me.autobot.elytramace.mixin.ElytraMaceMixinPluginForge",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_25",
   "client": [
     "MixinMultiPlayerGameMode_MaceAttack_NEW",
     "MixinMultiPlayerGameMode_MaceAttack_OLD"
