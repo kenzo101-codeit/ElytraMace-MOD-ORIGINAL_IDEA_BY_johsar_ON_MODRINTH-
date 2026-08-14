@@ -17,22 +17,28 @@ public class ElytraMaceMixinPluginForge implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
-        // Get Minecraft version from Forge's mod list
-        ModInfo minecraftMod = FMLLoader.getLoadingModList()
-                .getMods()
-                .stream()
-                .filter(mod -> mod.getModId().equals("minecraft"))
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException("Minecraft mod not found"));
-
-        ArtifactVersion mcVersion = minecraftMod.getVersion();
-        ArtifactVersion targetVersion = new DefaultArtifactVersion("1.21.5");
-
-        // 1.21.5+ logic
         try {
+            // Try to find the 'minecraft' mod entry safely
+            ModInfo minecraftMod = FMLLoader.getLoadingModList()
+                    .getMods()
+                    .stream()
+                    .filter(mod -> mod.getModId().equals("minecraft"))
+                    .findFirst()
+                    .orElse(null);
+
+            if (minecraftMod == null || minecraftMod.getVersion() == null) {
+                HAS_FALL_DISTANCE = false;
+                return;
+            }
+
+            // Parse the version string to a DefaultArtifactVersion to compare safely
+            String versionStr = minecraftMod.getVersion().toString();
+            ArtifactVersion mcVersion = new DefaultArtifactVersion(versionStr);
+            ArtifactVersion targetVersion = new DefaultArtifactVersion("1.21.5");
+
             HAS_FALL_DISTANCE = mcVersion.compareTo(targetVersion) >= 0;
         } catch (Exception e) {
-            // Fail SAFE, not hard
+            // Fail safe: mixin plugin should never throw during onLoad
             HAS_FALL_DISTANCE = false;
         }
     }
